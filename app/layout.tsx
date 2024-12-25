@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-inter-sans",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const ibm_plex_serif = IBM_Plex_Serif({
   subsets: ["latin"],
   weight: ["400", "700"],
+  variable: "--font-ibm-plex-serif",
 });
 
 
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased`}
+        className={`${inter.variable} ${ibm_plex_serif.variable}`}
       >
         {children}
       </body>
